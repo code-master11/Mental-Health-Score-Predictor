@@ -1,5 +1,5 @@
 // Change this if your FastAPI server runs elsewhere.
-const API = 'http://127.0.0.1:8000';
+const API = 'https://mental-health-score-predictor-mzy3.onrender.com/';
 
 const opts = {
   gender: ['Male', 'Female'],
