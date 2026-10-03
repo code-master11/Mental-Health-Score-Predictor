@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mansik Santulan Score</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-in">
+    <div class="brand"><span class="logo" aria-hidden="true"></span>Mansik Santulan <small>Student wellbeing predictor</small></div>
+    <div class="status" id="status"><i></i><span>Checking server…</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="title">
+    <h1>Mental balance score</h1>
+    <p>Enter a student's daily routine. The model returns an estimated score from 0 to 10 and a habit review.</p>
+  </div>
+
+  <div class="layout">
+    <form id="f" novalidate>
+      <section class="card">
+        <h2>Student profile</h2>
+        <div class="row">
+          <div class="field"><label for="age">Age</label><input id="age" type="number" min="10" max="100" value="21"></div>
+          <div class="field"><label for="country">Country</label><select id="country"></select></div>
+        </div>
+        <div class="row">
+          <div class="field"><span class="lbl">Gender</span><div class="seg" id="gender"></div></div>
+          <div class="field"><span class="lbl">Academic level</span><div class="seg" id="academic"></div></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Social media use</h2>
+        <div class="row">
+          <div class="field"><label for="platform">Most used platform</label><select id="platform"></select></div>
+          <div class="field"><label for="purpose">Main purpose</label><select id="purpose"></select></div>
+        </div>
+        <div class="field" data-slider="usage" data-label="Daily usage" data-min="0" data-max="14" data-step="0.1" data-val="4" data-unit=" h"></div>
+        <div class="field" data-slider="unlocks" data-label="Phone unlocks per day" data-min="0" data-max="300" data-step="1" data-val="120" data-unit=""></div>
+      </section>
+
+      <section class="card">
+        <h2>Daily routine</h2>
+        <div class="field" data-slider="study" data-label="Study" data-min="0" data-max="14" data-step="0.1" data-val="4" data-unit=" h"></div>
+        <div class="field" data-slider="activity" data-label="Physical activity" data-min="0" data-max="6" data-step="0.1" data-val="1.5" data-unit=" h"></div>
+        <div class="field" data-slider="sleep" data-label="Sleep per night" data-min="0" data-max="12" data-step="0.1" data-val="7" data-unit=" h"></div>
+        <div class="field"><span class="lbl">Stress level</span><div class="seg" id="stress"></div></div>
+      </section>
+
+      <div class="actions">
+        <button type="button" class="ghost" id="reset">Reset</button>
+        <button type="submit" class="go" id="go">Predict score</button>
+      </div>
+    </form>
+
+    <aside class="side">
+      <section class="card result">
+        <h2>Result</h2>
+        <svg class="gauge" viewBox="0 0 300 170" role="img" aria-label="Score gauge from 0 to 10">
+          <path d="M30 150 A120 120 0 0 1 90 46.1" class="arc" stroke="#D64550"/>
+          <path d="M90 46.1 A120 120 0 0 1 210 46.1" class="arc" stroke="#E9A23B"/>
+          <path d="M210 46.1 A120 120 0 0 1 270 150" class="arc" stroke="#1F9D7A"/>
+          <g class="needle" id="needle"><line x1="150" y1="150" x2="150" y2="50" stroke="#0F2A43" stroke-width="4" stroke-linecap="round"/><circle cx="150" cy="150" r="9" fill="#0F2A43"/></g>
+          <text x="30" y="169" text-anchor="middle">0</text><text x="270" y="169" text-anchor="middle">10</text>
+        </svg>
+        <div class="score"><span id="num">–</span><em>/ 10</em></div>
+        <div class="center"><span class="badge" id="band">No result yet</span></div>
+        <p class="msg" id="msg">Complete the form and select Predict score.</p>
+      </section>
+
+      <section class="card" id="habits" hidden>
+        <h2>Habit review</h2>
+        <ul class="habits" id="habitList"></ul>
+        <p class="fine">Based on general wellbeing guidelines, not on the model.</p>
+      </section>
+
+      <section class="card" id="histCard" hidden>
+        <h2>Recent predictions</h2>
+        <ul class="hist" id="hist"></ul>
+      </section>
+
+      <p class="fine disclaimer">This tool gives a statistical estimate from survey data. It is not a medical diagnosis. If you are struggling, speak to a doctor or counsellor.</p>
+    </aside>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
