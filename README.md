@@ -14,7 +14,7 @@ An end-to-end machine learning project that estimates a student's **mental healt
 <!-- Add your screenshots to a /screenshots folder and update these paths -->
 | Form | Result |
 |------|--------|
-| ![Form](screenshots/form.png) | ![Result](screenshots/result.png) |
+| ![Form](mainss.png) | ![Result](resultss.png) |
 
 ---
 
