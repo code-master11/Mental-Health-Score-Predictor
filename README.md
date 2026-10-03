@@ -4,7 +4,6 @@ An end-to-end machine learning project that estimates a student's **mental healt
 
 > **Disclaimer:** This is an educational project. The score is a statistical estimate learned from survey data. It is **not** a medical diagnosis or professional advice.
 
-**Live API:** https://mental-health-score-predictor-mzy3.onrender.com (interactive docs at `/docs`)
 
 > The API runs on a free hosting plan, so the first request after a period of inactivity can take up to a minute while the server wakes up.
 
