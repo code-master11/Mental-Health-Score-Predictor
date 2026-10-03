@@ -11,13 +11,6 @@ An end-to-end machine learning project that estimates a student's **mental healt
 
 ---
 
-## Screenshots
-
-| Form | Result |
-|------|--------|
-| ![Form](mainss.png) | ![Result](resultss.png) |
-
----
 
 ## Features
 
