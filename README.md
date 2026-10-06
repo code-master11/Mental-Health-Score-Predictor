@@ -211,7 +211,7 @@ curl -X POST https://mental-health-score-predictor-mzy3.onrender.com/predict \
 ## Author
 
 **Your Name**
-[LinkedIn](https://www.linkedin.com/in/your-profile) · [GitHub](https://github.com/code-master11)
+[LinkedIn](www.linkedin.com/in/harshpathak11) · [GitHub](https://github.com/code-master11)
 
 ## License
 
